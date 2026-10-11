@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: StintLane Guide
+    url: https://stintlane.app/docs
+    about: Installation, setup and how-to questions. Start here.
+  - name: Account, license and billing
+    url: https://stintlane.app
+    about: Manage your account, trial key and licenses. Please don't post license or billing details in public issues.

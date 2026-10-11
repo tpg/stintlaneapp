@@ -1,0 +1,115 @@
+name: Bug report
+description: Something in StintLane isn't working as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem.
+
+        **This issue will be public.** StintLane records window titles, file paths and web addresses, so check any screenshots, exports or logs for private information before you attach them. Never include your license key.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we make it happen ourselves?
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of StintLane is affected?
+      options:
+        - Tracking (apps, windows, files, web addresses)
+        - Projects and rules
+        - Timeline
+        - Reports
+        - Apps view / search
+        - Export
+        - Privacy and exclusions
+        - Menu bar
+        - License / trial activation
+        - Installation / updates
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: StintLane version
+      description: You can find this in StintLane's About window.
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: e.g. macOS 15.1 Sequoia
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac processor
+      options:
+        - Apple silicon (M-series)
+        - Intel
+        - Not sure
+    validations:
+      required: false
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: Is Accessibility permission granted to StintLane?
+      description: System Settings › Privacy & Security › Accessibility
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: other-apps
+    attributes:
+      label: Apps or browsers involved
+      description: If the problem involves a specific app or browser, name it and its version.
+      placeholder: e.g. Safari 18.1, Visual Studio Code 1.95
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, logs or other context
+      description: Drag and drop images or files here. Remove anything private first.
+    validations:
+      required: false
